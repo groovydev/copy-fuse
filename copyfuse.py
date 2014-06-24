@@ -149,7 +149,7 @@ class CopyFUSE(LoggingMixIn, Operations):
         else:
             raw = ''
 
-        f = tempfile.NamedTemporaryFile(delete=False)
+        f = tempfile.NamedTemporaryFile(delete=True)
         f.write(raw)
         self.files[path] = {'object': f, 'modified': False}
 
